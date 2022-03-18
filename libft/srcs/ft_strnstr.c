@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jukoh <jukoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 21:35:54 by jukoh             #+#    #+#             */
-/*   Updated: 2022/03/18 17:36:21 by jukoh            ###   ########.fr       */
+/*   Created: 2022/03/18 18:42:14 by jukoh             #+#    #+#             */
+/*   Updated: 2022/03/18 18:59:27 by jukoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char    *ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *haycheck, const char *needle, size_t len)
 {
-    int    i;
-    char *str;
+	size_t	i;
+	size_t	j;
+	char	*str;
+	char	*str2;
 
-    str = (char *)s;
-    i = 0;
-    while (str[i] != (char)c)
-    {
-        if (str[i] == '\0')
-            return (NULL);
-        i++;
-    }
-    return (&str[i]);
+	str = (char *)haycheck;
+	str2 = (char *)needle;
+	i = 0;
+	if (str2[0] == '\0')
+		return (str);
+	while (i < len)
+	{
+		j = 0;
+		while (i + j < len && str[i + j] == str2[j])
+		{
+			if (str2[j + 1] == '\0')
+				return (&str[i]);
+			j ++;
+		}
+		i ++;
+	}
+	return (0);
 }
