@@ -6,7 +6,7 @@
 /*   By: jukoh <jukoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 16:47:03 by jukoh             #+#    #+#             */
-/*   Updated: 2022/04/08 17:17:22 by jukoh            ###   ########.fr       */
+/*   Updated: 2022/04/08 17:46:59 by jukoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	s1_length;
 	unsigned int	s2_length;
 	char			*str;
-	int				i;
+	unsigned int	i;
 
 	i = 0;
 	s1_length = ft_strlen(s1);
@@ -24,10 +24,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str = malloc(sizeof(char) * (s1_length + s2_length + 1));
 	if (!str)
 		return (NULL);
-	while (s1)
-		*str ++ = *(s1++);
-	while (s2)
-		*str ++ = *(s2++);
-	*str = '\0';
+	while (i != s1_length)
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	i = 0;
+	while (i != s2_length)
+	{
+		str[s1_length + i] = s2[i];
+		i++;
+	}
+	str[s1_length + s2_length] = '\0';
 	return (str);
 }
