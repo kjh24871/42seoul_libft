@@ -6,7 +6,7 @@
 /*   By: jukoh <jukoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:19:03 by jukoh             #+#    #+#             */
-/*   Updated: 2022/03/18 21:23:51 by jukoh            ###   ########.fr       */
+/*   Updated: 2022/04/08 16:47:47 by jukoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,6 @@ char	*ft_strnstr(const char *haycheck, const char *needle, size_t len);
 int		ft_atoi(const char *src);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *src);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 #endif

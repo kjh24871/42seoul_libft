@@ -6,17 +6,19 @@
 /*   By: jukoh <jukoh@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 19:11:26 by jukoh             #+#    #+#             */
-/*   Updated: 2022/03/18 19:18:43 by jukoh            ###   ########.fr       */
+/*   Updated: 2022/04/08 16:01:38 by jukoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
+
 int	ft_atoi(const char *src)
 {
-	int		i;
-	int		negative;
-	int		sum;
-	char	*str;
+	int			i;
+	int			negative;
+	unsigned long long	sum;
+	char		*str;
 
 	str = (char *)src;
 	sum = 0;
@@ -37,5 +39,10 @@ int	ft_atoi(const char *src)
 		sum += str[i] - '0';
 		i++;
 	}
-	return (sum * negative);
+	if (sum > LLONG_MAX - 1 && negative == 1)
+		return (-1);
+	else if(sum > LLONG_MAX && negative == -1)
+		return (0);
+	else
+		return (sum * negative);
 }
