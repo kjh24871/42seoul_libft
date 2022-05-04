@@ -3,22 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukoh <jukoh@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jukoh <jukoh@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 20:35:09 by jukoh             #+#    #+#             */
-/*   Updated: 2022/03/16 20:37:02 by jukoh            ###   ########.fr       */
+/*   Updated: 2022/04/13 15:41:38 by jukoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isdigit(int c)
+
+int	ft_isdigit(int c)
 {
-    if (c >= 48 && c <= 57)
-    {
-        return (1);
-    }
-    else
-    {
-        return (0);
-    }
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

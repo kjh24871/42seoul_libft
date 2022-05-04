@@ -6,16 +6,17 @@
 /*   By: jukoh <jukoh@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:43:32 by jukoh             #+#    #+#             */
-/*   Updated: 2022/04/11 17:41:20 by jukoh            ###   ########.fr       */
+/*   Updated: 2022/04/13 15:35:35 by jukoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static unsigned int	word_counter(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	count;
-	
+
 	count = 0;
 	i = 0;
 	while (s[i] != '\0')
@@ -85,7 +86,7 @@ char	**ft_split(char const *s, char c)
 {
 	unsigned int	word_count;
 	char			**strs;
-	
+
 	word_count = word_counter(s, c);
 	strs = malloc(sizeof(char *) * (word_count + 1));
 	if (!strs)

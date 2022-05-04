@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukoh <jukoh@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jukoh <jukoh@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:42:14 by jukoh             #+#    #+#             */
-/*   Updated: 2022/03/18 18:59:27 by jukoh            ###   ########.fr       */
+/*   Updated: 2022/04/13 15:28:00 by jukoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strnstr(const char *haycheck, const char *needle, size_t len)
 {
 	size_t	i;

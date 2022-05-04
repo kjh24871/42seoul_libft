@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukoh <jukoh@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jukoh <jukoh@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 16:47:03 by jukoh             #+#    #+#             */
-/*   Updated: 2022/04/08 17:46:59 by jukoh            ###   ########.fr       */
+/*   Updated: 2022/04/13 15:34:08 by jukoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	unsigned int	s1_length;

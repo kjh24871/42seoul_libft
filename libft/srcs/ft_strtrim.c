@@ -6,18 +6,19 @@
 /*   By: jukoh <jukoh@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 17:48:10 by jukoh             #+#    #+#             */
-/*   Updated: 2022/04/11 14:41:29 by jukoh            ###   ########.fr       */
+/*   Updated: 2022/04/13 15:26:47 by jukoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strtrim(char const *s1, char const *set)
 {	
 	size_t		idx;
 	size_t		start;
 	size_t		end;
 	char		*str;
-	
+
 	idx = 0;
 	start = 0;
 	end = ft_strlen(s1) - 1;
@@ -28,7 +29,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	idx = end - start + 1;
 	str = malloc(sizeof(char) * (idx + 1));
 	if (!str)
-		return(NULL);
+		return (NULL);
 	ft_strlcpy(str, &s1[start], idx + 1);
-	return(str);
+	return (str);
 }

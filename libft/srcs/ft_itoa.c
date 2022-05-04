@@ -6,7 +6,7 @@
 /*   By: jukoh <jukoh@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:00:06 by jukoh             #+#    #+#             */
-/*   Updated: 2022/04/11 17:05:09 by jukoh            ###   ########.fr       */
+/*   Updated: 2022/04/13 15:40:38 by jukoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static unsigned int	ft_length(int nb)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	unsigned int	len;
 	char			*str;

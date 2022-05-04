@@ -3,20 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukoh <jukoh@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jukoh <jukoh@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 20:41:42 by jukoh             #+#    #+#             */
-/*   Updated: 2022/03/16 20:49:41 by jukoh            ###   ########.fr       */
+/*   Updated: 2022/04/13 15:41:54 by jukoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isascii(int c)
+
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    else
-    {
-        return (0);
-    }
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+	{
+		return (0);
+	}
 }
